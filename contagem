@@ -1,0 +1,15 @@
+programa
+{
+   funcao inicio()
+   {
+      inteiro valor, i
+      escreva("Digite um valor: ")
+      leia(valor)
+      
+      para (i = 1; i <= valor; i++)
+      {
+         escreva(i, " ")
+      }
+      escreva("Acabou!")
+   }
+}
