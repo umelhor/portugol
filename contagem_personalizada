@@ -1,0 +1,19 @@
+programa
+{
+   funcao inicio()
+   {
+      inteiro inicio, fim, incremento, i
+      escreva("Digite o valor inicial: ")
+      leia(inicio)
+      escreva("Digite o valor final: ")
+      leia(fim)
+      escreva("Digite o incremento: ")
+      leia(incremento)
+      
+      para (i = inicio; i <= fim; i = i + incremento)
+      {
+         escreva(i, " ")
+      }
+      escreva("Acabou!")
+   }
+}
