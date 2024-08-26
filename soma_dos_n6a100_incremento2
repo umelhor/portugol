@@ -1,0 +1,12 @@
+programa
+{
+   funcao inicio()
+   {
+      inteiro i, soma = 0
+      para (i = 6; i <= 100; i = i + 2)
+      {
+         soma = soma + i
+      }
+      escreva("A soma dos números de 6 a 100 é: ", soma)
+   }
+}
