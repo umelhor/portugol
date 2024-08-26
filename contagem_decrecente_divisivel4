@@ -1,0 +1,18 @@
+programa
+{
+   funcao inicio()
+   {
+      inteiro i
+      para (i = 30; i >= 1; i--)
+      {
+         se (i % 4 == 0)
+         {
+            escreva("[", i, "] ")
+         }
+         senao
+         {
+            escreva(i, " ")
+         }
+      }
+   }
+}
