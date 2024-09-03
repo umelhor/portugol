@@ -1,23 +1,22 @@
-programa
-{
-   funcao inicio()
-   {
-      inteiro N
-      real numero
 
-      escreva("Digite o valor de N: ")
-      leia(N)
+    use BibliotecaMatematica
 
-      para (inteiro i = 1; i <= N; i++)
-      {
-         escreva("Digite o ", i, "º número real: ")
-         leia(numero)
+    inteiro N
+    real numero
 
-         // Imprime apenas os números a partir do segundo
-         se (i > 1)
-         {
-            escreva("Número arredondado: ", arredondar(numero, 1), "\n")
-         }
-      }
-   }
-}
+    escreva("Digite um número inteiro: ")
+    leia(N)
+
+    // Criar um vetor para armazenar os números reais
+    real numeros[N]
+
+    para i de 1 ate N faca
+        escreva("Digite um número real: ")
+        leia(numeros[i])
+    fimpara
+
+    // Imprimir os números com 1 casa decimal
+    para i de 2 ate N faca
+        escrevaL("Número ", i, " arredondado: ", arredondar(numeros[i], 1))
+    fimpara
+fimalgoritmo
