@@ -1,30 +1,34 @@
-    use BibliotecaMatematica
+programa
+{
+   inclua biblioteca Matematica -> mat
 
-    inteiro N
-    real numero
+   funcao inicio()
+   {
+      inteiro N
+      real numero
 
-    escreva("Digite um número inteiro: ")
-    leia(N)
+      escreva("Digite um número inteiro N: ")
+      leia(N)
 
-    se (N % 2 = 0) entao
-        // Se N é par
-        inteiro metade = N / 2
-        real numeros[metade]
-
-        para i de 1 ate metade faca
-            escreva("Digite um número real: ")
-            leia(numeros[i])
-            escrevaL("Raiz quadrada de ", numeros[i], ": ", raiz_quadrada(numeros[i]))
-        fimpara
-    senao
-        // Se N é ímpar
-        inteiro dobro = N * 2
-        real numeros[dobro]
-
-        para i de 1 ate dobro faca
-            escreva("Digite um número real: ")
-            leia(numeros[i])
-            escrevaL("Raiz cúbica de ", numeros[i], ": ", raiz_cubica(numeros[i]))
-        fimpara
-    fimenquanto
-fimalgoritmo
+      se (N % 2 == 0)
+      {
+         // N é par, então lê N/2 números e imprime suas raízes quadradas
+         para (inteiro i = 1; i <= N/2; i++)
+         {
+            escreva("Digite o ", i, "º número real: ")
+            leia(numero)
+            escreva("Raiz quadrada: ", mat.raiz_quadrada(numero), "\n")
+         }
+      }
+      senao
+      {
+         // N é ímpar, então lê N*2 números e imprime suas raízes cúbicas
+         para (inteiro i = 1; i <= N*2; i++)
+         {
+            escreva("Digite o ", i, "º número real: ")
+            leia(numero)
+            escreva("Raiz cúbica: ", mat.raiz_cubica(numero), "\n")
+         }
+      }
+   }
+}
