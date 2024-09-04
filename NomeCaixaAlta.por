@@ -1,16 +1,34 @@
+programa
+{
+   inclua biblioteca Matematica -> mat
 
-    use BibliotecaTexto
+   funcao inicio()
+   {
+      inteiro N
+      real numero
 
-    texto nome
+      escreva("Digite um número inteiro N: ")
+      leia(N)
 
-    enquanto (verdadeiro) faca
-        escreva("Digite um nome (ou 'fim' para encerrar): ")
-        leia(nome)
-
-        se (texto_igual(nome, "fim")) entao
-            pare
-        fimse
-
-        escrevaL("Nome em caixa alta: ", maiusculo(nome))
-    fimenquanto
-fimalgoritmo
+      se (N % 2 == 0)
+      {
+         // N é par, então lê N/2 números e imprime suas raízes quadradas
+         para (inteiro i = 1; i <= N/2; i++)
+         {
+            escreva("Digite o ", i, "º número real: ")
+            leia(numero)
+            escreva("Raiz quadrada: ", mat.raiz_quadrada(numero), "\n")
+         }
+      }
+      senao
+      {
+         // N é ímpar, então lê N*2 números e imprime suas raízes cúbicas
+         para (inteiro i = 1; i <= N*2; i++)
+         {
+            escreva("Digite o ", i, "º número real: ")
+            leia(numero)
+            escreva("Raiz cúbica: ", mat.raiz_cubica(numero), "\n")
+         }
+      }
+   }
+}
